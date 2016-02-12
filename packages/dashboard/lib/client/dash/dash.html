@@ -1,0 +1,125 @@
+<template name="adminDash">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<div class="flexBoxContainer">
+					{{> AppUsersCount}}
+					{{> ChanlsCount}}
+					{{> ChanlUsersCount}}
+					{{> FeedCommentsCount}}
+					{{> FeedsCount}}
+				</div>
+			</div>
+		</div>
+	</div>
+</template>
+
+<template name="AppUsersCount">
+	<div class="col-md-6">
+		<div class="tile">
+			<div class="infoContainer">
+				<div class="if-icon"></div>
+				<div class="if-section">
+					<div class="title">Total Number of Users</div>
+					<div class="data">
+						<span class="highlight">
+							{{#if ready}} {{appUsers.length}} {{else}}Loading... {{/if}}
+						</span>
+						: Users
+					</div>
+				</div>
+			</div>
+			<div class="actionButton">
+				<a href="/admin/app_users">View Items</a>
+			</div>
+		</div>
+	</div>
+</template>
+
+<template name="ChanlsCount">
+	<div class="col-md-6">
+		<div class="tile">
+			<div class="infoContainer">
+				<div class="if-icon"></div>
+				<div class="if-section">
+					<div class="title">Total Number of Chanls</div>
+					<div class="data">
+						<span class="highlight">
+							{{#if ready}} {{Chanls.length}} {{else}} Loading...	{{/if}}
+						</span>
+						: Chanls
+					</div>
+				</div>
+			</div>
+			<div class="actionButton">
+				<a href="/admin/chanls">View Items</a>
+			</div>
+		</div>
+	</div>
+</template>
+
+<template name="ChanlUsersCount">
+	<div class="col-md-6">
+		<div class="tile">
+			<div class="infoContainer">
+				<div class="if-icon"></div>
+				<div class="if-section">
+					<div class="title">Total Number of Users/Chanls</div>
+					<div class="data">
+						<span class="highlight">
+							{{#if ready}}{{ChanUsers.length}} {{else}}Loading... {{/if}}
+						</span>
+						: Users Within Chanls
+					</div>
+				</div>
+			</div>
+			<div class="actionButton">
+				View Items
+			</div>
+		</div>
+	</div>
+</template>
+
+<template name="FeedCommentsCount">
+	<div class="col-md-6">
+		<div class="tile">
+			<div class="infoContainer">
+				<div class="if-icon"></div>
+				<div class="if-section">
+					<div class="title">Total Number of Comments</div>
+					<div class="data">
+						<span class="highlight">
+							{{#if ready}}{{FeedComments.length}}{{else}}Loading...{{/if}}
+						</span>
+						: Comments on Feeds
+					</div>
+				</div>
+			</div>
+			<div class="actionButton">
+				View Items
+			</div>
+		</div>
+	</div>
+</template>
+
+<template name="FeedsCount">
+	<div class="col-md-6">
+		<div class="tile">
+			<div class="infoContainer">
+				<div class="if-icon"></div>
+				<div class="if-section">
+					<div class="title">Total Number of Feeds</div>
+					<div class="data">
+						<span class="highlight">
+							{{#if ready}} {{Feeds.length}} {{else}} Loading...{{/if}}
+						</span>
+						: Feeds
+					</div>
+				</div>
+			</div>
+			<div class="actionButton">
+				View Items
+			</div>
+		</div>
+	</div>
+</template>

@@ -1,0 +1,65 @@
+<template name="appUser">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12">
+				<h1>User Detail</h1>
+				<hr>
+				{{#if ready}}
+				<div class="col-md-6">
+					{{> appUserDetail appUser=appUser}}
+				</div>
+				<div class="col-md-6">
+					{{> appUserGcmNotification appUser=appUser}}
+					{{> appUserConversations}}
+				</div>
+				{{else}}
+				Loading...
+				{{/if}}
+
+				<div></div>
+			</div>
+		</div>
+	</div>
+</template>
+
+<template name="appUserDetail">
+	{{#with appUser}}
+	<!-- {{imgs}} -->
+	<h3>{{username}}</h3>
+	<div>
+		<div>{{phoneNumber}}</div>
+		{{#with email}}
+		{{this}}
+		{{else}}
+		<div>No email provided</div>
+		{{/with}}
+	</div>
+	<h3>Chanls</h3>
+	{{chanls}}
+	<div>{{createdAt}} | {{updatedAt}}</div>	
+	{{else}}
+	No user
+	{{/with}}
+</template>
+
+<template name="appUserGcmNotification">
+	{{#with appUser}}
+	<h4>Send User Notification</h4>
+	<hr>
+	<div>
+		<textarea placeholder="Input message" style="width: 100%;height: 144px;resize: none;"></textarea>
+		<input type="hidden" value="{{gcmId}}">
+	</div>
+	<button class="btn btn-primary">Send Notification</button>
+	{{else}}
+	No user
+	{{/with}}
+</template>
+
+<template name="appUserConversations">
+	<h4>Time with #charlie</h4>
+	<div>
+
+
+	</div>
+</template>

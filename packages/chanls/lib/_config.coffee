@@ -1,0 +1,1 @@
+@AppChanlsSubs = new SubsManager()

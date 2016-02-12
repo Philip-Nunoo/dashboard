@@ -1,0 +1,53 @@
+<template name="allChanls">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12">
+				<h1>Chanls {{#if ready}}- {{chanls.length}}{{/if}}</h1>
+				<hr>
+				<div>
+					{{#if ready}}
+					<div class="table-responsive">
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+									<th>Name</th>
+									<th>Category</th>
+									<th>Pin</th>
+									<th>Desc</th>
+									<th>Type</th>
+									<th>No of Followers</th>
+									<th>Created At</th>
+									<th>Updated At</th>
+									<th></th>
+								</tr>
+							</thead>
+							<tbody>
+								{{#each chanls}}
+								<tr>
+									<td>{{name}}</td>
+									<td>{{category}}</td>
+									<td>#{{chanlPin}}</td>
+									<td>{{desc}}</td>
+									<td>{{meta.chanlType}}</td>
+									<td>Not available</td>
+									<td>{{createdAt}}</td>
+									<td>{{updatedAt}}</td>
+									<td>
+										<button class="btn btn-xs btn-primary">View Detail</button>
+										<button class="btn btn-xs btn-success">Chanls</button>
+									</td>
+								</tr>
+								{{else}}
+								<div>No chanl found</div>
+								{{/each}}
+							</tbody>
+						</table>
+					</div>
+					{{else}}
+					Loading...
+					{{/if}}
+				</div>
+			</div>
+		</div>
+	</div>
+</template>

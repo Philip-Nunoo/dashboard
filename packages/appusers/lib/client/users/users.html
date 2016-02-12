@@ -1,0 +1,45 @@
+<template name="allUsers">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12">
+				<h1>Users {{#if ready}}- {{appUsers.length}}{{/if}}</h1>
+				<hr>
+				<div>
+					{{#if ready}}
+					<div class="table-responsive">
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+									<th>Username</th>
+									<th>Phone Number</th>
+									<th>Country</th>
+									<th>Date Created</th>
+									<th></th>
+								</tr>
+							</thead>
+							<tbody>
+								{{#each appUsers}}
+								<tr>
+									<td>{{username}}</td>
+									<td>{{phoneNumber}}</td>
+									<td>not available</td>
+									<td>{{createdAt}}</td>
+									<td>
+										<a href="/admin/app_user/{{_id._str}}" class="btn btn-xs btn-primary">View Detail</a>
+										<a href="/admin/app_user/{{_id._str}}" class="btn btn-xs btn-success">Chanls</a>
+									</td>
+								</tr>
+								{{else}}
+								<div>No user found</div>
+								{{/each}}
+							</tbody>
+						</table>
+					</div>
+					{{else}}
+					Loading...
+					{{/if}}
+				</div>
+			</div>
+		</div>
+	</div>
+</template>

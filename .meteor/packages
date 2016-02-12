@@ -30,7 +30,7 @@ dburles:collection-helpers
 useraccounts:bootstrap
 meteorhacks:subs-manager
 alethes:pages
-
+fortawesome:fontawesome
 ###
 dashboard
 appusers

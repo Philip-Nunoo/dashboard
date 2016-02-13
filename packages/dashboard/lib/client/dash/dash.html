@@ -1,60 +1,58 @@
 <template name="adminDash">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-8 col-md-offset-2">
-				<div class="flexBoxContainer">
-					{{> AppUsersCount}}
-					{{> ChanlsCount}}
-					{{> ChanlUsersCount}}
-					{{> FeedCommentsCount}}
-					{{> FeedsCount}}
-				</div>
-			</div>
+	<div class="row">
+		<div class="panel-advancedoptions">
+			{{> AppUsersCount}}
+			{{> ChanlsCount}}
+			{{> FeedCommentsCount}}
+			{{> FeedsCount}}			
 		</div>
 	</div>
 </template>
+<!-- <div class="flexBoxContainer">
+	{{> AppUsersCount}}
+	{{> ChanlsCount}}
+	{{> ChanlUsersCount}}
+	{{> FeedCommentsCount}}
+	{{> FeedsCount}}
+</div> -->
 
 <template name="AppUsersCount">
-	<div class="col-md-6">
-		<div class="tile">
-			<div class="infoContainer">
-				<div class="if-icon"></div>
-				<div class="if-section">
-					<div class="title">Total Number of Users</div>
-					<div class="data">
-						<span class="highlight">
-							{{#if ready}} {{appUsers.length}} {{else}}Loading... {{/if}}
-						</span>
-						: Users
-					</div>
+	<div class="col-md-3">
+		<a class="info-tiles tiles-inverse has-footer" href="/admin/app_users">
+			<div class="tiles-heading">
+				<div class="pull-left">Users</div>
+				<div class="pull-right">
+					<div id="tileorders" class="sparkline-block"></div>
 				</div>
 			</div>
-			<div class="actionButton">
-				<a href="/admin/app_users">View Items</a>
+			<div class="tiles-body">
+				<div class="text-center">{{#if ready}} {{appUsers.length}} {{else}}Loading... {{/if}}</div>
 			</div>
-		</div>
+			<div class="tiles-footer">
+				<div class="pull-left">manage orders</div>
+				<div class="pull-right percent-change">+20.7%</div>
+			</div>
+		</a>
 	</div>
 </template>
 
 <template name="ChanlsCount">
-	<div class="col-md-6">
-		<div class="tile">
-			<div class="infoContainer">
-				<div class="if-icon"></div>
-				<div class="if-section">
-					<div class="title">Total Number of Chanls</div>
-					<div class="data">
-						<span class="highlight">
-							{{#if ready}} {{Chanls.length}} {{else}} Loading...	{{/if}}
-						</span>
-						: Chanls
-					</div>
+	<div class="col-md-3">
+		<a class="info-tiles tiles-green has-footer" href="/admin/chanls">
+			<div class="tiles-heading">
+				<div class="pull-left">Chanls</div>
+				<div class="pull-right">
+					<div id="tilerevenues" class="sparkline-block"></div>
 				</div>
 			</div>
-			<div class="actionButton">
-				<a href="/admin/chanls">View Items</a>
+			<div class="tiles-body">
+				<div class="text-center">{{#if ready}} {{Chanls.length}} {{else}} Loading...	{{/if}}</div>
 			</div>
-		</div>
+			<div class="tiles-footer">
+				<div class="pull-left">go to accounts</div>
+				<div class="pull-right percent-change">+17.2%</div>
+			</div>
+		</a>
 	</div>
 </template>
 
@@ -81,45 +79,41 @@
 </template>
 
 <template name="FeedCommentsCount">
-	<div class="col-md-6">
-		<div class="tile">
-			<div class="infoContainer">
-				<div class="if-icon"></div>
-				<div class="if-section">
-					<div class="title">Total Number of Comments</div>
-					<div class="data">
-						<span class="highlight">
-							{{#if ready}}{{FeedComments.length}}{{else}}Loading...{{/if}}
-						</span>
-						: Comments on Feeds
-					</div>
+	<div class="col-md-3">
+		<a class="info-tiles tiles-blue has-footer" href="#">
+			<div class="tiles-heading">
+				<div class="pull-left">Comments</div>
+				<div class="pull-right">
+					<div id="tiletickets" class="sparkline-block"></div>
 				</div>
 			</div>
-			<div class="actionButton">
-				View Items
+			<div class="tiles-body">
+				<div class="text-center">{{#if ready}}{{FeedComments.length}}{{else}}Loading...{{/if}}</div>
 			</div>
-		</div>
+			<div class="tiles-footer">
+				<div class="pull-left">see all tickets</div>
+				<div class="pull-right percent-change">+10.3%</div>
+			</div>
+		</a>
 	</div>
 </template>
 
 <template name="FeedsCount">
-	<div class="col-md-6">
-		<div class="tile">
-			<div class="infoContainer">
-				<div class="if-icon"></div>
-				<div class="if-section">
-					<div class="title">Total Number of Feeds</div>
-					<div class="data">
-						<span class="highlight">
-							{{#if ready}} {{Feeds.length}} {{else}} Loading...{{/if}}
-						</span>
-						: Feeds
-					</div>
+	<div class="col-md-3">
+		<a class="info-tiles tiles-midnightblue has-footer" href="#">
+			<div class="tiles-heading">
+				<div class="pull-left">Feeds</div>
+				<div class="pull-right">
+					<div id="tilemembers" class="sparkline-block"></div>
 				</div>
 			</div>
-			<div class="actionButton">
-				View Items
+			<div class="tiles-body">
+				<div class="text-center">{{#if ready}} {{Feeds.length}} {{else}} Loading...{{/if}}</div>
 			</div>
-		</div>
+			<div class="tiles-footer">
+				<div class="pull-left">manage members</div>
+				<div class="pull-right percent-change">-11.1%</div>
+			</div>
+		</a>
 	</div>
 </template>

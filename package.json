@@ -5,7 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "meteor --settings private/settings/dev.json",
-    "with_prod_db": "MONGO_URL='mongodb://chanl:adminthechanl1@ds033875.mongolab.com:33875/chanl_map' meteor"
+    "with_prod_db": "MONGO_URL='mongodb://chanl:adminthechanl1@ds033875.mongolab.com:33875/chanl_map' meteor -p 4000"
   },
   "keywords": [],
   "author": "",

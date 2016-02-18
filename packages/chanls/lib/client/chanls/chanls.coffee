@@ -12,3 +12,8 @@ Template.allChanls.helpers
 		
 	chanls: ->
 		Chanls.find().fetch()
+
+
+Template.allChanls.events
+	'click .recommend': (e, t) ->
+		Meteor.call 'recommend', @_id._str

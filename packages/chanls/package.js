@@ -31,6 +31,8 @@ Package.onUse(function(api) {
 
   api.addFiles('chanls.js');
 
+  api.addFiles(["lib/server/methods.coffee"], server);
+
   api.addFiles(
     [
       "lib/_config.coffee"

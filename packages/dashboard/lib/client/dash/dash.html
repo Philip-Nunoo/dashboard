@@ -26,7 +26,7 @@
 				</div>
 			</div>
 			<div class="tiles-body">
-				<div class="text-center">{{#if ready}} {{appUsers.length}} {{else}}Loading... {{/if}}</div>
+				<div class="text-center">{{#if ready}} {{appUsers.length}} {{else}} <i class="fa-li fa fa-spinner fa-spin"></i> {{/if}}</div>
 			</div>
 			<div class="tiles-footer">
 				<div class="pull-left">manage orders</div>
@@ -46,7 +46,7 @@
 				</div>
 			</div>
 			<div class="tiles-body">
-				<div class="text-center">{{#if ready}} {{Chanls.length}} {{else}} Loading...	{{/if}}</div>
+				<div class="text-center">{{#if ready}} {{Chanls.length}} {{else}} <i class="fa-li fa fa-spinner fa-spin"></i>	{{/if}}</div>
 			</div>
 			<div class="tiles-footer">
 				<div class="pull-left">go to accounts</div>
@@ -65,7 +65,7 @@
 					<div class="title">Total Number of Users/Chanls</div>
 					<div class="data">
 						<span class="highlight">
-							{{#if ready}}{{ChanUsers.length}} {{else}}Loading... {{/if}}
+							{{#if ready}}{{ChanUsers.length}} {{else}}<i class="fa-li fa fa-spinner fa-spin"></i> {{/if}}
 						</span>
 						: Users Within Chanls
 					</div>
@@ -88,7 +88,7 @@
 				</div>
 			</div>
 			<div class="tiles-body">
-				<div class="text-center">{{#if ready}}{{FeedComments.length}}{{else}}Loading...{{/if}}</div>
+				<div class="text-center">{{#if ready}}{{FeedComments.length}}{{else}}<i class="fa-li fa fa-spinner fa-spin"></i>{{/if}}</div>
 			</div>
 			<div class="tiles-footer">
 				<div class="pull-left">see all tickets</div>
@@ -108,7 +108,7 @@
 				</div>
 			</div>
 			<div class="tiles-body">
-				<div class="text-center">{{#if ready}} {{Feeds.length}} {{else}} Loading...{{/if}}</div>
+				<div class="text-center">{{#if ready}} {{Feeds.length}} {{else}} <i class="fa-li fa fa-spinner fa-spin"></i>{{/if}}</div>
 			</div>
 			<div class="tiles-footer">
 				<div class="pull-left">manage members</div>
